@@ -1,0 +1,5 @@
+(define str "helloworld")
+(define i 5)
+(define hello (substring str 0 i))
+(define world (substring str i))
+(define helloworld (string-append hello "_" world))
