@@ -4,3 +4,4 @@
 (define world (substring str i))
 (define hello_world (string-append hello "_" world))
 (define (delete-char str2 x) (string-append (substring str2 0 x) (substring str2 (+ x 1))))
+(delete-char hello_world 1)
