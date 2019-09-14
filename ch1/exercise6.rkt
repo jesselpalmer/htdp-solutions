@@ -2,6 +2,7 @@
 
 (define cat 🐈)
 
-(define (find-pixels img) (* (image-width img) (image-height img)))
+(define (find-pixels img)
+  (* (image-width img) (image-height img)))
 
 (find-pixels cat)
