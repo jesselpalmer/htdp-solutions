@@ -17,12 +17,12 @@
   (- (revenue ticket-price)
      (cost ticket-price)))
 
-(profit 2.9) ; highest price to the dime. other prices in order from hi to low.
-(profit 3)
-(profit 2.8)
-(profit 3.1)
-(profit 2.7)
-(profit 2.6)
-(profit 2.5)
-(profit 2)
-(profit 3.9)
+(profit 2.9) ; highest price to the dime at $1064.10
+(profit 3)   ; $1063.20
+(profit 2.8) ; $1062
+(profit 3.1) ; $1059.30
+(profit 2.7) ; $1056.90
+(profit 2.6) ; $1048.80
+(profit 2.5) ; $1037.70
+(profit 2)   ; $937.20
+(profit 3.9) ; $920.10
