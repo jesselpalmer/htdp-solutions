@@ -1,0 +1,28 @@
+(define average-change-per-ticket-price-change 15)
+(define base-num-of-attendees 120)
+(define base-ticket-price-per-attendee 5.0)
+(define cost-per-ticket-price-change 0.1)
+(define fixed-cost-per-attendee 0.04)
+(define fixed-cost-per-show 180)
+
+(define (attendees ticket-price)
+  (- base-num-of-attendees
+     (* (- ticket-price base-ticket-price-per-attendee)
+        (/ average-change-per-ticket-price-change cost-per-ticket-price-change))))
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+(define (cost ticket-price)
+  (+ fixed-cost-per-show (* fixed-cost-per-attendee (attendees ticket-price))))
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))
+
+(profit 2.9) ; highest price to the dime. other prices in order from hi to low.
+(profit 3)
+(profit 2.8)
+(profit 3.1)
+(profit 2.7)
+(profit 2.6)
+(profit 2.5)
+(profit 2)
+(profit 3.9)
