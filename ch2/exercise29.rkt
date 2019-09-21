@@ -1,0 +1,17 @@
+(define average-change-per-ticket-price-change 15)
+(define base-num-of-attendees 120)
+(define base-ticket-price-per-attendee 5.0)
+(define cost-per-ticket-price-change 0.1)
+(define fixed-cost-per-attendee 0.04)
+
+(define (attendees ticket-price)
+  (- base-num-of-attendees
+     (* (- ticket-price base-ticket-price-per-attendee)
+        (/ average-change-per-ticket-price-change cost-per-ticket-price-change))))
+(define (revenue ticket-price)
+  (* ticket-price (attendees ticket-price)))
+(define (cost ticket-price)
+  (* fixed-cost-per-attendee (attendees ticket-price)))
+(define (profit ticket-price)
+  (- (revenue ticket-price)
+     (cost ticket-price)))
