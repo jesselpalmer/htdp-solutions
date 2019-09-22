@@ -1,11 +1,13 @@
 (require 2htdp/image)
 
 (define cat 🐈)
-(define cat-width (image-width cat))
-(define cat-height (image-height cat))
 
-(define image-tall-or-wide? 
-  (if (= cat-width cat-height) "square" 
-  (if (> cat-width cat-height) "wide" "tall")))
+(define (obj-square? width height) (if (= width height) #true #false))
+(define (obj-wide? width height) (if (> width height) #true #false))
+(define (obj-tall-or-wide? width height)
+  (if (obj-square? width height) "square" 
+  (if (obj-wide? width height) "wide" "tall")))
+(define (image-tall-or-wide? img)
+  (obj-tall-or-wide? (image-width img) (image-height img)))
 
-image-tall-or-wide?
+(image-tall-or-wide? cat)
