@@ -5,4 +5,3 @@
 ; given: "Mary", expect: "Mar"
 (define (string-remove-last str)
   (substring str 0 (- (string-length str) 1)))
- 
